@@ -11,13 +11,13 @@ export default function BottomNavigation() {
   return (
     <div className={bottomNavigationStyle}>
       <Link to="/">
-        <Icon src={profileIcon} size="small" />
+        <Icon src={profileIcon} alt="profile" size="small" />
       </Link>
       <Link to="/projects">
-        <Icon src={githubIcon} size="small" />
+        <Icon src={githubIcon} alt="projects" size="small" />
       </Link>
       <Link to="/music">
-        <Icon src={spotifyIcon} size="small" />
+        <Icon src={spotifyIcon} alt="music" size="small" />
       </Link>
     </div>
   );

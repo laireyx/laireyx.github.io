@@ -18,7 +18,7 @@ export default function Main() {
   return (
     <Vertical>
       <Title>Take a seat.</Title>
-      <Avatar src={data.avatar_url} />
+      <Avatar src={data.avatar_url} alt="profile image" />
       <Paragraph>Nice to meet you. I am {data.name}.</Paragraph>
       <Section>
         <Title size="h3">Summary</Title>
@@ -27,7 +27,7 @@ export default function Main() {
           <br />
           2022.06 - 2022.08: KIST Intern
           <br />
-          2024.12 - : NAVER
+          2023.12 - : NAVER
         </Paragraph>
       </Section>
       <Section>
