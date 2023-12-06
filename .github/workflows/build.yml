@@ -3,7 +3,7 @@
 name: Publish Pages
 
 env:
-  VITE_API_URL:
+  VITE_API_URL: https://laireyx.net/gh-api
 
 # Controls when the workflow will run
 on:
