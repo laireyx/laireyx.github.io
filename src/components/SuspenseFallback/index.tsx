@@ -1,11 +1,10 @@
 import Title from '@components/Title';
-
-import { suspenseFallbackStyle } from './index.css';
+import Vertical from '@components/Vertical';
 
 export default function SuspenseFallback() {
   return (
-    <div className={suspenseFallbackStyle}>
+    <Vertical>
       <Title>Loading</Title>
-    </div>
+    </Vertical>
   );
 }

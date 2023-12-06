@@ -5,12 +5,19 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background: url('./assets/background.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #000;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @supports (background-image: url('./assets/background.webp')) {
+    background-image: url('./assets/background.webp');
+  }
 }
 
 body {
@@ -29,4 +36,13 @@ body {
 
   max-width: 1280px;
   text-align: center;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
 }

@@ -81,7 +81,7 @@ module.exports = {
             position: 'before',
           },
           {
-            pattern: '*.{css,svg}',
+            pattern: '*.{css,svg,jpg,png}',
             patternOptions: { matchBase: true },
             group: 'type',
             position: 'after',
@@ -97,6 +97,9 @@ module.exports = {
   },
 
   settings: {
+    react: {
+      version: 'detect',
+    },
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },

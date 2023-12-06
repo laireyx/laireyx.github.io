@@ -8,6 +8,9 @@ export const appStyle = style([
   themeClass,
   fullFlex,
   {
+    maxHeight: '100vh',
+  },
+  {
     display: 'flex',
     flexDirection: 'column',
   },

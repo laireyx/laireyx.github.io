@@ -1,5 +1,9 @@
 import { titleStyle } from './index.css';
 
-export default function Title({ children }: React.PropsWithChildren) {
-  return <h1 className={titleStyle}>{children}</h1>;
+type TitleProps = React.PropsWithChildren & {
+  size?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+};
+
+export default function Title({ size = 'h1', children }: TitleProps) {
+  return <h1 className={titleStyle[size]}>{children}</h1>;
 }

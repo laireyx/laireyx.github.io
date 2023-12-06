@@ -3,10 +3,10 @@ import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
 import Body from '@components/Body';
+import BottomNavigation from '@components/BottomNavigation';
 import SuspenseFallback from '@components/SuspenseFallback';
 
 import { appStyle } from './App.css';
-
 
 export default function App() {
   return (
@@ -16,6 +16,7 @@ export default function App() {
           <Outlet />
         </Suspense>
       </Body>
+      <BottomNavigation />
     </div>
   );
 }

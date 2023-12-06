@@ -1,10 +1,10 @@
 import { createTheme } from '@vanilla-extract/css';
 
 export const [themeClass, vars] = createTheme({
-  image: {
-    small: '64px',
-    medium: '128px',
-    large: '256px',
+  icon: {
+    small: '48px',
+    medium: '96px',
+    large: '192px',
   },
 
   space: {
@@ -18,14 +18,18 @@ export const [themeClass, vars] = createTheme({
   color: {
     container: '#444',
     box: '#22222270',
+    white: '#fffc',
   },
 
   border: {
+    none: 'none',
     transparent: '1px solid transparent',
   },
 
   borderRadius: {
-    medium: '8px',
+    none: '0px',
+    small: '8px',
+    medium: '12px',
     large: '16px',
   },
 });

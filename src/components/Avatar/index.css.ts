@@ -8,7 +8,7 @@ export const avatarStyle = style({
 });
 
 export const avatarImgStyle = style({
-  width: vars.image.medium,
-  height: vars.image.medium,
+  width: vars.icon.medium,
+  height: vars.icon.medium,
   clipPath: 'circle()',
 });
