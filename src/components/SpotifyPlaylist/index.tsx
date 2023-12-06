@@ -20,6 +20,7 @@ export default function SpotifyPlaylist({ src }: SpotifyPlaylistProps) {
   return (
     <div className={spotifyPlaylistWrapperStyle}>
       <iframe
+        title="spotify-playlist"
         className={loaded ? spotifyPlaylistStyle : spotifyPlaylistLoadingStyle}
         src={src}
         allowFullScreen={false}
