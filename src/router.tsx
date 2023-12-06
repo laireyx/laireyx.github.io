@@ -5,11 +5,12 @@ import {
 } from 'react-router-dom';
 
 import Main from '@pages/Main';
-import Music from '@pages/Music';
-import Projects from '@pages/Projects';
 
 import App from './App';
+import { lazy } from 'react';
 
+const Projects = lazy(() => import('@pages/Projects'));
+const Music = lazy(() => import('@pages/Music'));
 
 export const router = createHashRouter(
   createRoutesFromElements(
