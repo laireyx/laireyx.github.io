@@ -62,18 +62,27 @@ export default function Main() {
         {data.bio}
       </Paragraph>
       <Section>
-        <Title size="h3">Summary</Title>
-        <Paragraph>
-          2018.03 - 2024.02: Hanyang Univ. Dept. of CSE
-          <br />
-          2022.06 - 2022.08: KIST Intern
-          <br />
-          2023.12 - : NAVER
-        </Paragraph>
-      </Section>
-      <Section>
         <Title size="h3">Contacts</Title>
         <Link to="mailto:laireyx@gmail.com">laireyx@gmail.com</Link>
+      </Section>
+      <Section>
+        <Paragraph>
+          Vectors and icons by{' '}
+          <a
+            href="https://www.instagram.com/microstd/?ref=svgrepo.com"
+            target="_blank" rel="noreferrer"
+          >
+            Microstd
+          </a>{' '}
+          and{' '}
+          <a href="https://www.svgrepo.com/" target="_blank" rel="noreferrer">
+            SVG Repo
+          </a>{' '}
+          in CC Attribution License via{' '}
+          <a href="https://www.svgrepo.com/" target="_blank" rel="noreferrer">
+            SVG Repo
+          </a>
+        </Paragraph>
       </Section>
     </Vertical>
   );
