@@ -4,6 +4,11 @@ import { vars } from '@themes/index.css';
 
 const commonIconStyle = style({
   verticalAlign: 'middle',
+
+  transition: '0.5s',
+  ':hover': {
+    filter: 'brightness(0)',
+  },
 });
 
 export const iconStyle = {

@@ -13,6 +13,11 @@ export const bottomNavigationStyle = style([
   {
     border: vars.border.transparent,
     background: 'rgba(255, 255, 255, 0.2)',
+    transition: '0.5s',
+
+    ':hover': {
+      background: 'rgba(255, 255, 255, 0.4)',
+    },
   },
   sprinkles({
     borderRadius: {
