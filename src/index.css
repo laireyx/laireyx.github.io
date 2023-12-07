@@ -40,7 +40,7 @@ body {
 
 a {
   text-decoration: inherit;
-  color: inherit;
+  color: rgba(192, 192, 255, 0.87);
 }
 
 a:hover {
