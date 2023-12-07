@@ -9,7 +9,6 @@ import Title from '@components/Title';
 
 import queryGithubRepo from '../../queries/repos';
 
-
 interface GithubRepoProps {
   repo: string;
 }
@@ -32,7 +31,7 @@ export default function GithubRepo({ repo }: GithubRepoProps) {
 
   return (
     <Section>
-      <Link to={data.html_url}>
+      <Link to={data.homepage ?? data.html_url}>
         <Title size="h4">{data.name}</Title>
       </Link>
       <Paragraph>

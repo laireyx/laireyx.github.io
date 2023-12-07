@@ -1,3 +1,5 @@
+import { lazy } from 'react';
+
 import {
   Route,
   createHashRouter,
@@ -7,7 +9,6 @@ import {
 import Main from '@pages/Main';
 
 import App from './App';
-import { lazy } from 'react';
 
 const Projects = lazy(() => import('@pages/Projects'));
 const Music = lazy(() => import('@pages/Music'));

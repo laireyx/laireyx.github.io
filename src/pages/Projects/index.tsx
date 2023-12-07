@@ -7,9 +7,7 @@ import Section from '@components/Section';
 import Title from '@components/Title';
 import Vertical from '@components/Vertical';
 
-
 import queryGithubProfile from '../../queries/profile';
-
 
 export default function Projects() {
   const { data: profile } = useSuspenseQuery({
@@ -30,12 +28,12 @@ export default function Projects() {
       <GithubRepo repo="laireyx/react-worker-hooks" />
       <GithubRepo repo="laireyx/mofdb" />
 
-      <Paragraph>
+      <Section>
         <Title size="h6">
           See all my {profile.public_repos} projects at:&nbsp;
           <Link to={profile.html_url}>@laireyx</Link>
         </Title>
-      </Paragraph>
+      </Section>
     </Vertical>
   );
 }
