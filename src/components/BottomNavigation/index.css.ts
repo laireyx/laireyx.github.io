@@ -1,8 +1,8 @@
 import { style } from '@vanilla-extract/css';
 
+import { glassStyle } from '@styles/glassmorph.css';
 import { sprinkles } from '@styles/sprinkles.css';
 
-import { vars } from '@themes/index.css';
 
 export const bottomNavigationStyle = style([
   {
@@ -10,9 +10,8 @@ export const bottomNavigationStyle = style([
     flexDirection: 'row',
     justifyContent: 'space-evenly',
   },
+  glassStyle,
   {
-    border: vars.border.transparent,
-    background: 'rgba(255, 255, 255, 0.2)',
     transition: '0.5s',
 
     ':hover': {
