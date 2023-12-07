@@ -3,7 +3,6 @@ import { style } from '@vanilla-extract/css';
 import { glassStyle } from '@styles/glassmorph.css';
 import { sprinkles } from '@styles/sprinkles.css';
 
-
 export const bottomNavigationStyle = style([
   {
     display: 'flex',

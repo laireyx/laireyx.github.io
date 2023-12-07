@@ -8,7 +8,7 @@ export const appStyle = style([
   themeClass,
   fullFlex,
   {
-    maxHeight: '100vh',
+    height: '100dvh',
   },
   {
     display: 'flex',

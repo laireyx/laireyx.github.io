@@ -1,19 +1,13 @@
 import { style } from '@vanilla-extract/css';
 
-import { fullFlex } from '@styles/fullFlex.css';
-
 import { vars } from '@themes/index.css';
 
-export const verticalStyle = style([
-  fullFlex,
-  {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: vars.space.medium,
-  },
-]);
+export const verticalStyle = style({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  padding: vars.space.medium,
+});
 
 export const scrollableVerticalStyle = style([
   verticalStyle,
