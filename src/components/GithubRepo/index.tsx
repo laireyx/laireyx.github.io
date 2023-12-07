@@ -31,9 +31,10 @@ export default function GithubRepo({ repo }: GithubRepoProps) {
 
   return (
     <Section>
-      <Link to={data.homepage ?? data.html_url}>
-        <Title size="h4">{data.name}</Title>
-      </Link>
+      <Title size="h4">
+        <Link to={data.homepage ?? data.html_url}>{data.name}</Link>
+      </Title>
+
       <Paragraph>
         Last update: {updatedTime}
         <br />

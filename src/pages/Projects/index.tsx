@@ -20,9 +20,12 @@ export default function Projects() {
       <Title>Projects</Title>
 
       <Section>
-        <Link to="https://play.google.com/store/apps/details?id=net.miririt.maldivesplayer">
-          <Title size="h4">MaldiVes player</Title>
-        </Link>
+        <Title size="h4">
+          <Link to="https://play.google.com/store/apps/details?id=net.miririt.maldivesplayer">
+            MaldiVes player
+          </Link>
+        </Title>
+
         <Paragraph>Small yet powerful RMMV emulator on Android.</Paragraph>
       </Section>
       <GithubRepo repo="laireyx/react-worker-hooks" />
