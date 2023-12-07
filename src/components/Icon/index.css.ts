@@ -7,7 +7,7 @@ const commonIconStyle = style({
 
   transition: '0.5s',
   ':hover': {
-    filter: 'brightness(0)',
+    filter: 'brightness(0) drop-shadow(0 0 6px #000c)',
   },
 });
 
