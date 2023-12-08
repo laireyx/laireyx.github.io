@@ -1,7 +1,7 @@
+import Page from '@components/Page';
 import Paragraph from '@components/Paragraph';
 import Section from '@components/Section';
 import Title from '@components/Title';
-import Page from '@components/Page';
 
 export default function Resume() {
   return (
