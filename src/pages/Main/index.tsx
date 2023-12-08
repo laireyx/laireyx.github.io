@@ -54,7 +54,7 @@ export default function Main() {
   });
 
   return (
-    <Page>
+    <Page title="@laireyx">
       <Title>Nice to meet you.</Title>
 
       <Section>

@@ -16,7 +16,7 @@ export default function Projects() {
   });
 
   return (
-    <Page>
+    <Page title="@laireyx/projects">
       <Title>Projects</Title>
 
       <Section>

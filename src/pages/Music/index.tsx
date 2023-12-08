@@ -6,7 +6,7 @@ import Title from '@components/Title';
 
 export default function Music() {
   return (
-    <Page>
+    <Page title="@laireyx/music">
       <Section>
         <Title>Take a seat.</Title>
         <Paragraph>

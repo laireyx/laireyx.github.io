@@ -5,7 +5,7 @@ import Title from '@components/Title';
 
 export default function Resume() {
   return (
-    <Page>
+    <Page title="@laireyx/resume">
       <Title>Resume</Title>
 
       <Section>
