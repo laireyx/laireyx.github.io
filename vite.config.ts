@@ -1,5 +1,3 @@
-import { readFile } from 'node:fs/promises';
-
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
@@ -22,12 +20,12 @@ export default defineConfig({
                 {
                   filter: /[.](svg|png|jpe?g|gif|webp)$/,
                 },
-                async ({ path }) => {
-                  return {
-                    loader: 'dataurl',
-                    contents: await readFile(path),
-                  };
-                },
+                ({ path }) => ({
+                  loader: 'js',
+                  contents: `export default '${path
+                    .replace(build.initialOptions.absWorkingDir ?? '', '')
+                    .replace('\\', '\\\\')}';`,
+                }),
               );
             },
           },
