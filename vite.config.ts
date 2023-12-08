@@ -32,5 +32,14 @@ export default defineConfig({
         ],
       },
     }),
+    {
+      name: 'async-css',
+      transformIndexHtml(html) {
+        return html.replace(
+          /<link rel="stylesheet"/,
+          `<link rel="stylesheet" media="print" onload="this.media='all';"`,
+        );
+      },
+    },
   ],
 });
