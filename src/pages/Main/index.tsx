@@ -39,18 +39,19 @@ export default function Main() {
       company: null,
       blog: 'https://laireyx.net',
       location: 'Seoul, Republic of Korea',
-      email: null,
+      email: 'laireyx@gmail.com',
       hireable: null,
-      bio: null,
+      bio: "I'm having a blast with my fingers dancin on the keyboard.",
       twitter_username: null,
-      public_repos: 21,
+      public_repos: 22,
       public_gists: 0,
       followers: 4,
       following: 5,
       created_at: '2021-04-14T03:54:20Z',
-      updated_at: '2023-12-06T14:14:26Z',
+      updated_at: '2023-12-08T17:07:33Z',
     },
-    initialDataUpdatedAt: 0,
+    initialDataUpdatedAt: Date.now() - 61 * 1000,
+    staleTime: 60 * 1000,
   });
 
   return (
@@ -66,7 +67,7 @@ export default function Main() {
       </Section>
       <Section>
         <Title size="h3">Contacts</Title>
-        <Link to="mailto:laireyx@gmail.com">laireyx@gmail.com</Link>
+        <Link to={`mailto:${data.email}`}>{data.email}</Link>
       </Section>
       <Section>
         <Paragraph>
