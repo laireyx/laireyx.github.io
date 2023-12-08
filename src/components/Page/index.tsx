@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+
 import { scrollablePageStyle, pageStyle } from './index.css';
 
 type PageProps = React.PropsWithChildren & {

@@ -7,8 +7,8 @@ import Paragraph from '@components/Paragraph';
 import Section from '@components/Section';
 import Title from '@components/Title';
 
-import queryGithubProfile from '../../queries/profile';
 import { initialGithubProfile } from '../../queries/initialData';
+import queryGithubProfile from '../../queries/profile';
 
 export default function Main() {
   const { data } = useSuspenseQuery({
