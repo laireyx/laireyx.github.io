@@ -7,6 +7,8 @@ import { RouterProvider } from 'react-router-dom';
 import queryClient from './queryClient';
 import { router } from './router';
 
+import './index.css';
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
