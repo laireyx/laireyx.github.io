@@ -24,7 +24,7 @@ export default defineConfig({
                   loader: 'js',
                   contents: `export default '${path
                     .replace(build.initialOptions.absWorkingDir ?? '', '')
-                    .replace('\\', '\\\\')}';`,
+                    .replace(/\\/g, '\\\\')}';`,
                 }),
               );
             },
@@ -34,11 +34,25 @@ export default defineConfig({
     }),
     {
       name: 'async-css',
-      transformIndexHtml(html) {
-        return html.replace(
-          /<link rel="stylesheet"/,
-          `<link rel="stylesheet" media="print" onload="this.media='all';"`,
-        );
+      transformIndexHtml: {
+        order: 'post',
+        handler(html) {
+          return html.replace(
+            /(?![\r\n])[\s]*?<link rel="stylesheet".*?\/?>/g,
+            (cssTag) => {
+              return [
+                cssTag.replace('rel="stylesheet"', 'rel="preload" as="style"'),
+                cssTag.replace(
+                  /<link rel="stylesheet"/,
+                  `<link rel="stylesheet" media="print" onload="this.media='all';"`,
+                ),
+                cssTag
+                  .replace('>', '></noscript>')
+                  .replace(/<link/, '<noscript><link'),
+              ].join('\n');
+            },
+          );
+        },
       },
     },
   ],
