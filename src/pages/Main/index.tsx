@@ -58,7 +58,7 @@ export default function Main() {
       <Title>Nice to meet you.</Title>
 
       <Section>
-        <Avatar src={data.avatar_url} alt="profile image" />
+        <Avatar src={data.avatar_url} name={data.name ?? 'profile image'} />
         <Paragraph>
           I am {data.name}.<br />
           {data.bio}
