@@ -5,7 +5,7 @@ import Avatar from '@components/Avatar';
 import Paragraph from '@components/Paragraph';
 import Section from '@components/Section';
 import Title from '@components/Title';
-import Vertical from '@components/Vertical';
+import Page from '@components/Page';
 
 import queryGithubProfile from '../../queries/profile';
 
@@ -54,13 +54,16 @@ export default function Main() {
   });
 
   return (
-    <Vertical>
+    <Page>
       <Title>Nice to meet you.</Title>
-      <Avatar src={data.avatar_url} alt="profile image" />
-      <Paragraph>
-        I am {data.name}.<br />
-        {data.bio}
-      </Paragraph>
+
+      <Section>
+        <Avatar src={data.avatar_url} alt="profile image" />
+        <Paragraph>
+          I am {data.name}.<br />
+          {data.bio}
+        </Paragraph>
+      </Section>
       <Section>
         <Title size="h3">Contacts</Title>
         <Link to="mailto:laireyx@gmail.com">laireyx@gmail.com</Link>
@@ -70,7 +73,8 @@ export default function Main() {
           Vectors and icons by{' '}
           <a
             href="https://www.instagram.com/microstd/?ref=svgrepo.com"
-            target="_blank" rel="noreferrer"
+            target="_blank"
+            rel="noreferrer"
           >
             Microstd
           </a>{' '}
@@ -84,6 +88,6 @@ export default function Main() {
           </a>
         </Paragraph>
       </Section>
-    </Vertical>
+    </Page>
   );
 }

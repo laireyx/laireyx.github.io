@@ -5,7 +5,7 @@ import GithubRepo from '@components/GithubRepo';
 import Paragraph from '@components/Paragraph';
 import Section from '@components/Section';
 import Title from '@components/Title';
-import Vertical from '@components/Vertical';
+import Page from '@components/Page';
 
 import queryGithubProfile from '../../queries/profile';
 
@@ -16,7 +16,7 @@ export default function Projects() {
   });
 
   return (
-    <Vertical>
+    <Page>
       <Title>Projects</Title>
 
       <Section>
@@ -37,6 +37,6 @@ export default function Projects() {
           <Link to={profile.html_url}>@laireyx</Link>
         </Title>
       </Section>
-    </Vertical>
+    </Page>
   );
 }

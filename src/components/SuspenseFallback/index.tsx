@@ -1,10 +1,10 @@
 import Title from '@components/Title';
-import Vertical from '@components/Vertical';
+import Page from '@components/Page';
 
 export default function SuspenseFallback() {
   return (
-    <Vertical>
+    <Page>
       <Title>Loading</Title>
-    </Vertical>
+    </Page>
   );
 }
