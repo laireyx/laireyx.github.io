@@ -3,9 +3,26 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
+import { env } from 'node:process';
+import { config } from 'dotenv';
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    {
+      name: 'prefetch',
+      buildStart: {
+        order: 'post',
+        async handler() {
+          config();
+          const profile = await fetch(`${env.VITE_API_URL}/profile`).then(
+            (resp) => resp.json(),
+          );
+
+          env.VITE_PREFETCHED_PROFILE = JSON.stringify(profile);
+        },
+      },
+    },
     tsconfigPaths(),
     react(),
     vanillaExtractPlugin({

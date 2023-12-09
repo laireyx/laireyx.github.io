@@ -7,14 +7,13 @@ import Paragraph from '@components/Paragraph';
 import Section from '@components/Section';
 import Title from '@components/Title';
 
-import { initialGithubProfile } from '../../queries/initialData';
 import queryGithubProfile from '../../queries/profile';
 
 export default function Main() {
   const { data } = useSuspenseQuery({
     queryFn: queryGithubProfile,
     queryKey: ['gh-api', 'profile'],
-    initialData: initialGithubProfile,
+    initialData: queryGithubProfile.initialData,
   });
 
   return (
