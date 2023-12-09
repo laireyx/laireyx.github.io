@@ -40,7 +40,7 @@ export default defineConfig({
                 },
                 ({ path }) => ({
                   loader: 'js',
-                  contents: `export default '${relative(
+                  contents: `export default '/${relative(
                     build.initialOptions.absWorkingDir ?? '/',
                     path,
                   ).replace(/\\/g, '/')}';`,
