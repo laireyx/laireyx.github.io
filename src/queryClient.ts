@@ -4,7 +4,10 @@ export default new QueryClient({
   defaultOptions: {
     queries: {
       gcTime: Infinity,
-      staleTime: Infinity,
+      // Stale-while-revalidate trick
+      initialDataUpdatedAt: 1,
+      staleTime: 60 * 1000,
+
       refetchOnWindowFocus: false,
     },
   },

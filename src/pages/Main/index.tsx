@@ -15,8 +15,6 @@ export default function Main() {
     queryFn: queryGithubProfile,
     queryKey: ['gh-api', 'profile'],
     initialData: initialGithubProfile,
-    initialDataUpdatedAt: Date.now() - 61 * 1000,
-    staleTime: 60 * 1000,
   });
 
   return (
