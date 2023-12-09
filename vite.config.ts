@@ -57,7 +57,7 @@ export default defineConfig({
         order: 'post',
         handler(html) {
           return html.replace(
-            /(?![\r\n])[\s]*?<link rel="stylesheet".*?\/?>/g,
+            /(?![\r\n])[\s]*?<link[^<>]?rel="stylesheet"[^<>]*?\/?>/g,
             (cssTag) => {
               return [
                 cssTag.replace('rel="stylesheet"', 'rel="preload" as="style"'),
