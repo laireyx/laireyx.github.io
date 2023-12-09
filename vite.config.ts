@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
+import { relative } from 'node:path';
 import { env } from 'node:process';
 import { config } from 'dotenv';
 
@@ -39,9 +40,10 @@ export default defineConfig({
                 },
                 ({ path }) => ({
                   loader: 'js',
-                  contents: `export default '${path
-                    .replace(build.initialOptions.absWorkingDir ?? '', '')
-                    .replace(/\\/g, '\\\\')}';`,
+                  contents: `export default '${relative(
+                    build.initialOptions.absWorkingDir ?? '/',
+                    path,
+                  ).replace(/\\/g, '/')}';`,
                 }),
               );
             },
