@@ -5,5 +5,18 @@ type TitleProps = React.PropsWithChildren & {
 };
 
 export default function Title({ size = 'h1', children }: TitleProps) {
-  return <h1 className={titleStyle[size]}>{children}</h1>;
+  switch (size) {
+    case 'h1':
+      return <h1 className={titleStyle[size]}>{children}</h1>;
+    case 'h2':
+      return <h2 className={titleStyle[size]}>{children}</h2>;
+    case 'h3':
+      return <h3 className={titleStyle[size]}>{children}</h3>;
+    case 'h4':
+      return <h4 className={titleStyle[size]}>{children}</h4>;
+    case 'h5':
+      return <h5 className={titleStyle[size]}>{children}</h5>;
+    default:
+      return <h6 className={titleStyle[size]}>{children}</h6>;
+  }
 }
