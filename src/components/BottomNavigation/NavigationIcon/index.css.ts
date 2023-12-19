@@ -4,6 +4,7 @@ import { vars } from '@themes/index.css';
 
 export const navigationIconStyle = style({
   verticalAlign: 'middle',
+  outline: 'none',
 
   transition: '0.5s',
   ':hover': {
