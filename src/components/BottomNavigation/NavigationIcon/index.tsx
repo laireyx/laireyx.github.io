@@ -1,6 +1,10 @@
 import { Link, useMatch } from 'react-router-dom';
 
-import { activeNavigationIconStyle, navigationIconStyle } from './index.css';
+import {
+  activeNavigationIconStyle,
+  navigationIconStyle,
+  navigationWrapperStyle,
+} from './index.css';
 
 interface NavigationIconProps {
   src: string;
@@ -16,7 +20,7 @@ export default function NavigationIcon({
   const route = useMatch(href);
 
   return (
-    <Link to={href}>
+    <Link className={navigationWrapperStyle} to={href}>
       <img
         className={route ? activeNavigationIconStyle : navigationIconStyle}
         src={src}

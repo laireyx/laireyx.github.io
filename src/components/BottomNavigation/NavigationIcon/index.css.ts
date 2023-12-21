@@ -2,9 +2,12 @@ import { style } from '@vanilla-extract/css';
 
 import { vars } from '@themes/index.css';
 
+export const navigationWrapperStyle = style({
+  outline: 'none',
+});
+
 export const navigationIconStyle = style({
   verticalAlign: 'middle',
-  outline: 'none',
 
   transition: '0.5s',
   ':hover': {
