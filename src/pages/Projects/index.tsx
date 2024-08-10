@@ -28,6 +28,7 @@ export default function Projects() {
 
         <Paragraph>Small yet powerful RMMV emulator on Android.</Paragraph>
       </Section>
+      <GithubRepo repo="laireyx/Wuthering-Waves-Combat-Monitor" />
       <GithubRepo repo="laireyx/react-worker-hooks" />
       <GithubRepo repo="laireyx/mofdb" />
 

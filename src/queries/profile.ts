@@ -7,6 +7,7 @@ async function queryGithubProfile() {
 
 queryGithubProfile.initialData = () => {
   if (import.meta.env.VITE_PREFETCHED_PROFILE) {
+    console.log('use prefetched');
     return JSON.parse(
       import.meta.env.VITE_PREFETCHED_PROFILE,
     ) as Endpoints['GET /users/{username}']['response']['data'];

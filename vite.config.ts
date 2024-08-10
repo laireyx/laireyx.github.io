@@ -21,6 +21,7 @@ export default defineConfig({
           );
 
           env.VITE_PREFETCHED_PROFILE = JSON.stringify(profile);
+          console.log(env.VITE_PREFETCHED_PROFILE);
         },
       },
     },
