@@ -3,20 +3,22 @@ import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
 import Body from '@components/Body';
-import BottomNavigation from '@components/BottomNavigation';
+import Navigation from '@components/Navigation';
 import SuspenseFallback from '@components/SuspenseFallback';
 
-import { appStyle } from './App.css';
+import { appInnerStyle, appStyle } from './App.css';
 
 export default function App() {
   return (
     <div className={appStyle}>
-      <Body>
-        <Suspense fallback={<SuspenseFallback />}>
-          <Outlet />
-        </Suspense>
-      </Body>
-      <BottomNavigation />
+      <div className={appInnerStyle}>
+        <Navigation />
+        <Body>
+          <Suspense fallback={<SuspenseFallback />}>
+            <Outlet />
+          </Suspense>
+        </Body>
+      </div>
     </div>
   );
 }

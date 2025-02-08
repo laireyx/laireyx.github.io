@@ -21,7 +21,10 @@ export default function Projects() {
 
       <Section>
         <Title size="h4">
-          <Link to="https://play.google.com/store/apps/details?id=net.miririt.maldivesplayer">
+          <Link
+            to="https://play.google.com/store/apps/details?id=net.miririt.maldivesplayer"
+            target="_blank"
+          >
             MaldiVes player
           </Link>
         </Title>

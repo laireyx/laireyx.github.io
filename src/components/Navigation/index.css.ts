@@ -1,34 +1,31 @@
 import { style } from '@vanilla-extract/css';
 
-import { glassStyle } from '@styles/glassmorph.css';
+import { containerStyle } from '@styles/container.css';
 import { sprinkles } from '@styles/sprinkles.css';
 
-export const bottomNavigationStyle = style([
+export const navigationStyle = style([
   {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-evenly',
   },
-  glassStyle,
+  containerStyle,
   {
-    transition: '0.5s',
+    background: 'rgba(255, 255, 255, 0.3)',
+    transition: 'background 0.5s',
 
     ':hover': {
       background: 'rgba(255, 255, 255, 0.4)',
     },
   },
   sprinkles({
-    borderRadius: {
-      mobile: 'none',
-      desktop: 'large',
-    },
-    margin: {
-      mobile: 'none',
-      desktop: 'large',
-    },
     padding: {
       mobile: 'medium',
       desktop: 'large',
     },
   }),
+  {
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
+  },
 ]);

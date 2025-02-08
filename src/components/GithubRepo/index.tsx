@@ -32,7 +32,9 @@ export default function GithubRepo({ repo }: GithubRepoProps) {
   return (
     <Section>
       <Title size="h4">
-        <Link to={data.homepage ?? data.html_url}>{data.name}</Link>
+        <Link to={data.homepage ?? data.html_url} target="_blank">
+          {data.name}
+        </Link>
       </Title>
 
       <Paragraph>
