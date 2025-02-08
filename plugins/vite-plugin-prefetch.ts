@@ -36,7 +36,7 @@ export default function prefetch(): Plugin {
         const text = await fetch(`${id.replace(resolutionPrefix, '')}`).then(
           (resp) => resp.text(),
         );
-        const json = JSON.parse(text);
+        const json = JSON.parse(text) as unknown;
 
         return `export const raw = ${JSON.stringify(
           text,

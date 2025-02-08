@@ -94,6 +94,7 @@ module.exports = {
 
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error'],
+    'import/no-unresolved': ['error', { ignore: ['^prefetch:'] }],
   },
 
   settings: {

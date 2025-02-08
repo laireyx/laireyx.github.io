@@ -1,10 +1,10 @@
 import NavigationIcon from './NavigationIcon';
 
+import { navigationStyle } from './index.css';
 import githubIcon from '@assets/github-mark-white.svg';
 import homeIcon from '@assets/home.svg';
 import profileIcon from '@assets/profile.svg';
 import spotifyIcon from '@assets/spotify.png';
-import { navigationStyle } from './index.css';
 
 export default function Navigation() {
   return (
